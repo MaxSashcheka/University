@@ -91,6 +91,7 @@ extension GroupsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell", for: indexPath)
         
+        
         let group = groups[indexPath.row]
         cell.textLabel?.text = group.name
         cell.detailTextLabel?.text = "Grade: \(group.grade + 1)"

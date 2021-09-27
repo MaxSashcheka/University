@@ -19,6 +19,13 @@ class StudentCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         studentImageView.layer.cornerRadius = studentImageView.frame.height / 2
+        
+        let image = UIImage(systemName: "heart")
+        let imageView = UIImageView(image: image)
+        imageView.tintColor = .black
+        
+        self.accessoryView = imageView
+        
     }
     
     func setup(withStudent student: Student) {

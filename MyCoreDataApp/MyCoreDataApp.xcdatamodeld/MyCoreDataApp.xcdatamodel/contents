@@ -9,7 +9,7 @@
         <attribute name="enterDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="identifier" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="image" optional="YES" attributeType="Transformable" customClassName=".UIImage"/>
-        <attribute name="isExcellentStudent" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isExcellentStudent" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="group" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Group" inverseName="students" inverseEntity="Group"/>
     </entity>

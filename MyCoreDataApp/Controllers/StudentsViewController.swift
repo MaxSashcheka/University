@@ -24,7 +24,7 @@ class StudentsViewController: UIViewController {
         
         if let group = group {
             groupNumberLabel.text = group.name!
-            students = DataManager.fetchStudent(forGroup: group)
+            students = DataManager.fetchStudents(forGroup: group)
         }
         
 
@@ -96,6 +96,8 @@ extension StudentsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let student = students[indexPath.row]
         student.isExcellentStudent = !student.isExcellentStudent
+        DataManager.shared.saveContext()
+
         tableView.reloadData()
     }
     

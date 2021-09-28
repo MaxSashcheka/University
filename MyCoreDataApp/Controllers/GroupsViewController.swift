@@ -76,7 +76,7 @@ extension GroupsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let studentsViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "StudentsViewController") as! StudentsViewController
+        let studentsViewController = UIStoryboard(name: "DataBase", bundle: nil).instantiateViewController(identifier: "StudentsViewController") as! StudentsViewController
         
         let group = groups[indexPath.row]
         studentsViewController.group = group

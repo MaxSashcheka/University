@@ -32,7 +32,7 @@ class StudentCell: UITableViewCell {
         studentImageView.image = student.image
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd.MM"
+        dateFormatter.dateFormat = "MM-dd HH:mm"
         studentEnterDateLabel.text = dateFormatter.string(from: student.enterDate!)
         
         let image = UIImage(systemName: student.isExcellentStudent ? "heart.fill" : "heart")

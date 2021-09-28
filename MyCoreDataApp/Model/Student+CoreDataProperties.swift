@@ -10,6 +10,7 @@ import Foundation
 import CoreData
 import UIKit
 
+
 extension Student {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Student> {
@@ -18,9 +19,9 @@ extension Student {
 
     @NSManaged public var enterDate: Date?
     @NSManaged public var identifier: Int16
-    @NSManaged public var name: String?
     @NSManaged public var image: UIImage?
     @NSManaged public var isExcellentStudent: Bool
+    @NSManaged public var name: String?
     @NSManaged public var group: Group?
 
 }

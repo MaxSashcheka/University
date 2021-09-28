@@ -53,7 +53,6 @@ class DataManager {
         student.name = name
         student.identifier = Int16(identifier)
         student.enterDate = Date()
-        student.isExcellentStudent = false
         
         let randomImageIndex = Int.random(in: 0...26)
         let randomImage = UIImage(named: "image\(randomImageIndex)")
@@ -79,11 +78,26 @@ class DataManager {
         return groups
     }
     
-    static func fetchStudent(forGroup group: Group) -> [Student] {
+    static func fetchStudents(forGroup group: Group) -> [Student] {
         let fetchRequest: NSFetchRequest<Student> = Student.fetchRequest()
         var fetchingStudents = [Student]()
         
         fetchRequest.predicate = NSPredicate(format: "group == %@", group)
+        
+        do {
+            try fetchingStudents = shared.persistentContainer.viewContext.fetch(fetchRequest)
+        } catch let error {
+            print("Error: \(error.localizedDescription)")
+        }
+        
+        return fetchingStudents
+    }
+    
+    static func fetchExcellentStudents() -> [Student] {
+        let fetchRequest: NSFetchRequest<Student> = Student.fetchRequest()
+        var fetchingStudents = [Student]()
+        
+        fetchRequest.predicate = NSPredicate(format: "isExcellentStudent == true")
         
         do {
             try fetchingStudents = shared.persistentContainer.viewContext.fetch(fetchRequest)

@@ -37,21 +37,21 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Arq-iU-TCL">
-                        <rect key="frame" x="327" y="15" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="306.5" y="59" width="37.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" systemColor="systemGray2Color"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="j6D-j5-9bI" secondAttribute="bottom" constant="10" id="8UU-2S-eYl"/>
-                    <constraint firstAttribute="trailing" secondItem="Arq-iU-TCL" secondAttribute="trailing" constant="15" id="BEY-kh-SW1"/>
                     <constraint firstItem="EUa-gI-Piw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="RGG-eN-H9Y"/>
                     <constraint firstItem="j6D-j5-9bI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="WIV-qI-Czn"/>
                     <constraint firstItem="EUa-gI-Piw" firstAttribute="leading" secondItem="j6D-j5-9bI" secondAttribute="trailing" constant="10" id="YKd-tP-XT6"/>
                     <constraint firstItem="Ucw-1h-gg5" firstAttribute="leading" secondItem="j6D-j5-9bI" secondAttribute="trailing" constant="10" id="ban-U6-2FY"/>
+                    <constraint firstItem="Arq-iU-TCL" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-20" id="eaB-SI-OId"/>
                     <constraint firstItem="j6D-j5-9bI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="gFQ-po-4rI"/>
-                    <constraint firstItem="Arq-iU-TCL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="jln-wb-EOo"/>
+                    <constraint firstItem="Arq-iU-TCL" firstAttribute="top" secondItem="Ucw-1h-gg5" secondAttribute="top" id="kG1-pb-2K5"/>
                     <constraint firstItem="Ucw-1h-gg5" firstAttribute="top" secondItem="EUa-gI-Piw" secondAttribute="bottom" constant="10" id="uXL-4R-Crg"/>
                 </constraints>
             </tableViewCellContentView>

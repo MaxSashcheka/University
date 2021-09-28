@@ -41,11 +41,11 @@ class SettingsViewController: UIViewController {
         
         for _ in 0..<Int.random(in: 0..<model.groupsNames.count) {
             let groupName = model.groupsNames.removeFirst()
-            var group = DataManager.createGroup(name: groupName, grade: Int.random(in: 1...4))
+            var group = DataManager.shared.createGroup(name: groupName, grade: Int.random(in: 1...4))
             
             for _ in 0..<Int.random(in: 3..<model.names.count) {
                 let studentName = model.names.randomElement()!
-                var student = DataManager.createStudent(name: studentName, identifier: Int.random(in: 0...30000), group: group)
+                var student = DataManager.shared.createStudent(name: studentName, identifier: Int.random(in: 0...30000), group: group)
             }
         }
         

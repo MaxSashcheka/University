@@ -31,15 +31,15 @@
 		DDD412D92703934500730885 /* Group+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD412D32703934500730885 /* Group+CoreDataProperties.swift */; };
 		DDD412DA2703934500730885 /* Lesson+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD412D42703934500730885 /* Lesson+CoreDataClass.swift */; };
 		DDD412DB2703934500730885 /* Lesson+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD412D52703934500730885 /* Lesson+CoreDataProperties.swift */; };
-		DDD412DF2703972200730885 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD412DD2703972200730885 /* CollectionViewCell.swift */; };
-		DDD412E02703972200730885 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDD412DE2703972200730885 /* CollectionViewCell.xib */; };
+		DDD412DF2703972200730885 /* LessonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD412DD2703972200730885 /* LessonCell.swift */; };
+		DDD412E02703972200730885 /* LessonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDD412DE2703972200730885 /* LessonCell.xib */; };
 		DDFEE7892702811400CBE4F8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFEE7882702811400CBE4F8 /* SettingsViewController.swift */; };
 		DDFEE78C2702814300CBE4F8 /* BestStudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFEE78B2702814300CBE4F8 /* BestStudentsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DD0AA2362703C61B0068168D /* TimeTableDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableDetailViewController.swift; sourceTree = "<group>"; };
-		DD44AB1D2701F34A001A28FE /* MyCoreDataApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCoreDataApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD44AB1D2701F34A001A28FE /* University.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = University.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD44AB202701F34A001A28FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD44AB222701F34A001A28FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DD44AB242701F34A001A28FE /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
@@ -64,8 +64,8 @@
 		DDD412D32703934500730885 /* Group+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Group+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DDD412D42703934500730885 /* Lesson+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lesson+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DDD412D52703934500730885 /* Lesson+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lesson+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		DDD412DD2703972200730885 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		DDD412DE2703972200730885 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		DDD412DD2703972200730885 /* LessonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCell.swift; sourceTree = "<group>"; };
+		DDD412DE2703972200730885 /* LessonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LessonCell.xib; sourceTree = "<group>"; };
 		DDFEE7882702811400CBE4F8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DDFEE78B2702814300CBE4F8 /* BestStudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestStudentsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,7 +126,7 @@
 		DD44AB1E2701F34A001A28FE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DD44AB1D2701F34A001A28FE /* MyCoreDataApp.app */,
+				DD44AB1D2701F34A001A28FE /* University.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -223,8 +223,8 @@
 		DDD412BB2703852D00730885 /* Custom CollectionView Cells */ = {
 			isa = PBXGroup;
 			children = (
-				DDD412DD2703972200730885 /* CollectionViewCell.swift */,
-				DDD412DE2703972200730885 /* CollectionViewCell.xib */,
+				DDD412DD2703972200730885 /* LessonCell.swift */,
+				DDD412DE2703972200730885 /* LessonCell.xib */,
 			);
 			path = "Custom CollectionView Cells";
 			sourceTree = "<group>";
@@ -232,9 +232,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DD44AB1C2701F34A001A28FE /* MyCoreDataApp */ = {
+		DD44AB1C2701F34A001A28FE /* University */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD44AB342701F34B001A28FE /* Build configuration list for PBXNativeTarget "MyCoreDataApp" */;
+			buildConfigurationList = DD44AB342701F34B001A28FE /* Build configuration list for PBXNativeTarget "University" */;
 			buildPhases = (
 				DD44AB192701F34A001A28FE /* Sources */,
 				DD44AB1A2701F34A001A28FE /* Frameworks */,
@@ -244,9 +244,9 @@
 			);
 			dependencies = (
 			);
-			name = MyCoreDataApp;
+			name = University;
 			productName = MyCoreDataApp;
-			productReference = DD44AB1D2701F34A001A28FE /* MyCoreDataApp.app */;
+			productReference = DD44AB1D2701F34A001A28FE /* University.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -263,7 +263,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DD44AB182701F34A001A28FE /* Build configuration list for PBXProject "MyCoreDataApp" */;
+			buildConfigurationList = DD44AB182701F34A001A28FE /* Build configuration list for PBXProject "University" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -276,7 +276,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DD44AB1C2701F34A001A28FE /* MyCoreDataApp */,
+				DD44AB1C2701F34A001A28FE /* University */,
 			);
 		};
 /* End PBXProject section */
@@ -294,7 +294,7 @@
 				DD70DC30270300F30040E8EF /* BestStudents.storyboard in Resources */,
 				DD9BBDCB27021695002ECD57 /* StudentCell.xib in Resources */,
 				DD70DC33270300FA0040E8EF /* Settings.storyboard in Resources */,
-				DDD412E02703972200730885 /* CollectionViewCell.xib in Resources */,
+				DDD412E02703972200730885 /* LessonCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +307,7 @@
 			files = (
 				DD9BBDB9270203F3002ECD57 /* StudentsViewController.swift in Sources */,
 				DDD412D62703934500730885 /* Student+CoreDataClass.swift in Sources */,
-				DDD412DF2703972200730885 /* CollectionViewCell.swift in Sources */,
+				DDD412DF2703972200730885 /* LessonCell.swift in Sources */,
 				DD44AB2B2701F34A001A28FE /* MyCoreDataApp.xcdatamodeld in Sources */,
 				DDD412DB2703934500730885 /* Lesson+CoreDataProperties.swift in Sources */,
 				DDD412D82703934500730885 /* Group+CoreDataClass.swift in Sources */,
@@ -506,7 +506,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DD44AB182701F34A001A28FE /* Build configuration list for PBXProject "MyCoreDataApp" */ = {
+		DD44AB182701F34A001A28FE /* Build configuration list for PBXProject "University" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD44AB322701F34B001A28FE /* Debug */,
@@ -515,7 +515,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD44AB342701F34B001A28FE /* Build configuration list for PBXNativeTarget "MyCoreDataApp" */ = {
+		DD44AB342701F34B001A28FE /* Build configuration list for PBXNativeTarget "University" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD44AB352701F34B001A28FE /* Debug */,

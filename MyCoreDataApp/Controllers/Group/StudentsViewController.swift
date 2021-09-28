@@ -68,7 +68,7 @@ class StudentsViewController: UIViewController {
         
         if let group = group {
             
-            let newStudent = DataManager.createStudent(name: studentName, identifier: studentIdentifier, group: group)
+            let newStudent = DataManager.shared.createStudent(name: studentName, identifier: studentIdentifier, group: group)
             students.append(newStudent)
             let indexPath = IndexPath(row: students.count - 1, section: 0)
             studentsTableView.insertRows(at: [indexPath], with: .left)

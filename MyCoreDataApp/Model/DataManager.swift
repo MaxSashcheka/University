@@ -40,16 +40,16 @@ class DataManager {
     }
     
     //MARK: - Static methods to create Managed objects
-    static func createGroup(name: String, grade: Int) -> Group {
-        let group = Group(context: shared.persistentContainer.viewContext)
+    func createGroup(name: String, grade: Int) -> Group {
+        let group = Group(context: persistentContainer.viewContext)
         group.name = name
         group.grade = Int16(grade)
         
         return group
     }
     
-    static func createStudent(name: String, identifier: Int, group: Group) -> Student {
-        let student = Student(context: shared.persistentContainer.viewContext)
+    func createStudent(name: String, identifier: Int, group: Group) -> Student {
+        let student = Student(context: persistentContainer.viewContext)
         student.name = name
         student.identifier = Int16(identifier)
         student.enterDate = Date()
@@ -63,8 +63,31 @@ class DataManager {
         return student
     }
     
+    func createLesson(title: String, location: String, lessonType: LessonType) -> Lesson {
+        let lesson = Lesson(context: persistentContainer.viewContext)
+        lesson.title = title
+        lesson.location = location
+        lesson.lessonTypeStatus = lessonType
+        
+        return lesson
+    }
+    
     
     //MARK: - Fetching data
+    
+    func fetchLessons() -> [Lesson] {
+        let fetchRequest: NSFetchRequest<Lesson> = Lesson.fetchRequest()
+        var lessons = [Lesson]()
+        
+        do {
+            try lessons = persistentContainer.viewContext.fetch(fetchRequest)
+        } catch let error {
+            print("Error: \(error.localizedDescription)")
+        }
+        
+        return lessons
+    }
+    
     func fetchGroups() -> [Group] {
         let fetchRequest: NSFetchRequest<Group> = Group.fetchRequest()
         var groups = [Group]()

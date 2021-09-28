@@ -44,7 +44,7 @@ class GroupsViewController: UIViewController {
         groupNameTextField.text = ""
         gradePickerSegmentedControl.selectedSegmentIndex = 0
         
-        let newGroup = DataManager.createGroup(name: groupName, grade: groupGrade)
+        let newGroup = DataManager.shared.createGroup(name: groupName, grade: groupGrade)
         groups.append(newGroup)
         let indexPath = IndexPath(row: groups.count - 1, section: 0)
         tableView.insertRows(at: [indexPath], with: .left)

@@ -14,13 +14,23 @@ class TimeTableViewController: UIViewController {
     
     var lessons = [Lesson]()
     
+    var edgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         timetableCollectionView.delegate = self
         timetableCollectionView.dataSource = self
+        timetableCollectionView.register(LessonCell.nib(), forCellWithReuseIdentifier: LessonCell.reuseIdentifier)
 
         setupNavigationBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.lessons = DataManager.shared.fetchLessons()
+        timetableCollectionView.reloadData()
     }
     
     private func setupNavigationBar() {
@@ -46,7 +56,7 @@ class TimeTableViewController: UIViewController {
     
     @objc func addNewLesson() {
         let detailViewController = UIStoryboard(name: "Timetable", bundle: nil).instantiateViewController(identifier: "TimeTableDetailViewController") as! TimeTableDetailViewController
-            
+        
         self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 
@@ -59,8 +69,31 @@ extension TimeTableViewController: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LessonCell.reuseIdentifier, for: indexPath) as! LessonCell
+        
+        let lesson = lessons[indexPath.row]
+        cell.setup(withLesson: lesson)
+        
+        return cell
     }
     
+}
+
+extension TimeTableViewController: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let itemWidth = collectionView.frame.width - edgeInsets.left * 2
+        let itemHeight = itemWidth / 3
+        
+        return CGSize(width: itemWidth, height: itemHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return edgeInsets
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return edgeInsets.bottom
+    }
     
 }

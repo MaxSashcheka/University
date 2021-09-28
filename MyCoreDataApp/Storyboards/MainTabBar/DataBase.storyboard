@@ -46,7 +46,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="2A0-SM-oOK">
-                                <rect key="frame" x="0.0" y="283" width="414" height="613"/>
+                                <rect key="frame" x="0.0" y="263" width="414" height="633"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GroupCell" textLabel="BdQ-hw-lAE" detailTextLabel="g2a-PQ-AXS" style="IBUITableViewCellStyleSubtitle" id="pgS-Md-qRc">
                                         <rect key="frame" x="20" y="55.5" width="374" height="55.5"/>
@@ -79,7 +79,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="eFo-Qr-ADI" firstAttribute="trailing" secondItem="uKa-2i-wKy" secondAttribute="trailing" constant="20" id="G8j-ao-Xfz"/>
-                            <constraint firstItem="2A0-SM-oOK" firstAttribute="top" secondItem="8fU-bv-P0l" secondAttribute="bottom" constant="50" id="K0W-UV-66f"/>
+                            <constraint firstItem="2A0-SM-oOK" firstAttribute="top" secondItem="8fU-bv-P0l" secondAttribute="bottom" constant="30" id="K0W-UV-66f"/>
                             <constraint firstItem="eFo-Qr-ADI" firstAttribute="trailing" secondItem="nkt-JG-MKQ" secondAttribute="trailing" constant="20" id="LZ2-w2-QfB"/>
                             <constraint firstItem="uKa-2i-wKy" firstAttribute="top" secondItem="nkt-JG-MKQ" secondAttribute="bottom" constant="15" id="Qj5-1J-fgU"/>
                             <constraint firstItem="8fU-bv-P0l" firstAttribute="top" secondItem="uKa-2i-wKy" secondAttribute="bottom" constant="20" id="Usw-bT-3SJ"/>

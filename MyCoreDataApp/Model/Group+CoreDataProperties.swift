@@ -2,7 +2,7 @@
 //  Group+CoreDataProperties.swift
 //  MyCoreDataApp
 //
-//  Created by Max Sashcheka on 9/27/21.
+//  Created by Max Sashcheka on 9/28/21.
 //
 //
 
@@ -19,6 +19,7 @@ extension Group {
     @NSManaged public var grade: Int16
     @NSManaged public var name: String?
     @NSManaged public var students: NSSet?
+    @NSManaged public var lessons: NSSet?
 
 }
 
@@ -36,6 +37,23 @@ extension Group {
 
     @objc(removeStudents:)
     @NSManaged public func removeFromStudents(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for lessons
+extension Group {
+
+    @objc(addLessonsObject:)
+    @NSManaged public func addToLessons(_ value: Lesson)
+
+    @objc(removeLessonsObject:)
+    @NSManaged public func removeFromLessons(_ value: Lesson)
+
+    @objc(addLessons:)
+    @NSManaged public func addToLessons(_ values: NSSet)
+
+    @objc(removeLessons:)
+    @NSManaged public func removeFromLessons(_ values: NSSet)
 
 }
 

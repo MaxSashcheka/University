@@ -10,7 +10,6 @@ import Foundation
 import CoreData
 import UIKit
 
-
 extension Student {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Student> {

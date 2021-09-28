@@ -19,7 +19,7 @@ class SettingsViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         
         let attributes = [
-            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 30, weight: .bold),
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 45, weight: .bold),
             NSAttributedString.Key.foregroundColor: UIColor.black
         ]
         navigationController?.navigationBar.largeTitleTextAttributes = attributes
@@ -36,9 +36,6 @@ class SettingsViewController: UIViewController {
         
     }
     
-    var numberOfGroupsToCreate = 3
-    var numberOfStudentsPerGroup = 4
-    
     @IBAction func fillRandomData(_ sender: Any) {
         var model = RandomStudentsModel()
         
@@ -46,8 +43,8 @@ class SettingsViewController: UIViewController {
             let groupName = model.groupsNames.removeFirst()
             var group = DataManager.createGroup(name: groupName, grade: Int.random(in: 1...4))
             
-            for _ in 0..<Int.random(in: 0..<model.names.count) {
-                let studentName = model.names.removeFirst()
+            for _ in 0..<Int.random(in: 3..<model.names.count) {
+                let studentName = model.names.randomElement()!
                 var student = DataManager.createStudent(name: studentName, identifier: Int.random(in: 0...30000), group: group)
             }
         }
@@ -68,7 +65,6 @@ struct RandomStudentsModel {
         "Naruto",
         "Saske Uchiha",
         "Denis Skurat",
-        "Ilya Rusak",
         "Artem Van"
     ]
     

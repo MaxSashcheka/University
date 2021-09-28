@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Group" representedClassName="Group" syncable="YES">
+    <entity name="Group" representedClassName=".Group" syncable="YES">
         <attribute name="grade" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="lessons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Lesson" inverseName="groups" inverseEntity="Lesson"/>
         <relationship name="students" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Student" inverseName="group" inverseEntity="Student"/>
     </entity>
-    <entity name="Student" representedClassName="Student" syncable="YES">
+    <entity name="Lesson" representedClassName=".Lesson" syncable="YES">
+        <attribute name="lessonType" optional="YES" attributeType="String"/>
+        <attribute name="location" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="groups" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Group" inverseName="lessons" inverseEntity="Group"/>
+    </entity>
+    <entity name="Student" representedClassName=".Student" syncable="YES">
         <attribute name="enterDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="identifier" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="image" optional="YES" attributeType="Transformable" customClassName=".UIImage"/>
@@ -14,7 +21,8 @@
         <relationship name="group" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Group" inverseName="students" inverseEntity="Group"/>
     </entity>
     <elements>
-        <element name="Group" positionX="-424.37890625" positionY="15.05078125" width="128" height="88"/>
-        <element name="Student" positionX="-63" positionY="0" width="128" height="133"/>
+        <element name="Group" positionX="-423.21875" positionY="-69.65625" width="128" height="103"/>
+        <element name="Student" positionX="-99.79296875" positionY="34.08203125" width="128" height="133"/>
+        <element name="Lesson" positionX="-173.69140625" positionY="-114.25390625" width="128" height="103"/>
     </elements>
 </model>

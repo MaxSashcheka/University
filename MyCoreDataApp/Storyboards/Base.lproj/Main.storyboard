@@ -11,7 +11,7 @@
         <scene sceneID="TxS-qB-2A7">
             <objects>
                 <tabBarController id="fRA-nc-dw1" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zfH-No-OnP">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="zfH-No-OnP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -20,7 +20,8 @@
                     <connections>
                         <segue destination="sXT-0r-VKh" kind="relationship" relationship="viewControllers" id="566-ex-J1u"/>
                         <segue destination="l6o-qb-ipJ" kind="relationship" relationship="viewControllers" id="9gd-Ow-EjV"/>
-                        <segue destination="31a-wD-Ujd" kind="relationship" relationship="viewControllers" id="Bli-ao-SUb"/>
+                        <segue destination="vh5-fD-gsm" kind="relationship" relationship="viewControllers" id="WRd-uo-hek"/>
+                        <segue destination="31a-wD-Ujd" kind="relationship" relationship="viewControllers" id="ZS4-tk-d4d"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bdc-O4-5xC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -35,17 +36,27 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ytc-oZ-2ay" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-541" y="-213"/>
+            <point key="canvasLocation" x="-642" y="-149"/>
         </scene>
         <!--BestStudents-->
         <scene sceneID="VuP-7w-Qvw">
             <objects>
                 <viewControllerPlaceholder storyboardName="BestStudents" id="l6o-qb-ipJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Students" image="person.3" catalog="system" id="4Uq-Lt-tei"/>
+                    <tabBarItem key="tabBarItem" title="Best students" image="person.3" catalog="system" id="4Uq-Lt-tei"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GD4-mB-I2Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-164" y="-213"/>
+            <point key="canvasLocation" x="-333" y="-149"/>
+        </scene>
+        <!--Timetable-->
+        <scene sceneID="d6I-Yr-8bt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Timetable" id="vh5-fD-gsm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Timetable" image="table" catalog="system" id="Zv4-6P-dPL"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1o9-Zi-JQg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15" y="-149"/>
         </scene>
         <!--Settings-->
         <scene sceneID="vm1-ay-sqY">
@@ -55,12 +66,13 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tPL-5Q-cDE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="220" y="-213"/>
+            <point key="canvasLocation" x="318" y="-149"/>
         </scene>
     </scenes>
     <resources>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="person.3" catalog="system" width="128" height="62"/>
+        <image name="table" catalog="system" width="128" height="93"/>
         <image name="tray.2" catalog="system" width="128" height="114"/>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

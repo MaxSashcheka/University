@@ -62,11 +62,11 @@
             </objects>
             <point key="canvasLocation" x="744.92753623188412" y="156.69642857142856"/>
         </scene>
-        <!--Students-->
+        <!--Best students-->
         <scene sceneID="cCH-95-8n8">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fEE-Xa-pkK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Students" image="person.3" catalog="system" id="bDo-T9-ST6"/>
+                    <tabBarItem key="tabBarItem" title="Best students" image="person.3" catalog="system" id="bDo-T9-ST6"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LTW-CO-7E9">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

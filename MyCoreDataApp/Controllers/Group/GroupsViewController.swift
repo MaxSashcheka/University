@@ -62,7 +62,7 @@ class GroupsViewController: UIViewController {
         navigationController?.navigationBar.tintColor = .black
         
         let attributes = [
-            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 50, weight: .bold),
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 45, weight: .bold),
             NSAttributedString.Key.foregroundColor: UIColor.black
         ]
         navigationController?.navigationBar.largeTitleTextAttributes = attributes

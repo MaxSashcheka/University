@@ -126,3 +126,10 @@ enum SortType {
     case name
     case date
 }
+
+enum LessonType: String {
+    case lecture
+    case practice
+    case lab
+    case all
+}

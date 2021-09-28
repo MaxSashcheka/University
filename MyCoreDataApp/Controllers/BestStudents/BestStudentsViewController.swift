@@ -59,11 +59,11 @@ class BestStudentsViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         
         let attributes = [
-            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 30, weight: .bold),
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 45, weight: .bold),
             NSAttributedString.Key.foregroundColor: UIColor.black
         ]
         navigationController?.navigationBar.largeTitleTextAttributes = attributes
-        title = "Excellent students"
+        title = "Best students"
     }
     
     

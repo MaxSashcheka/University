@@ -22,10 +22,14 @@ class GroupsViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        groups = DataManager.fetchGroups()
-        
+            
         setupNavigationBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        groups = DataManager.shared.fetchGroups()
+        tableView.reloadData()
     }
 
     @IBAction func saveHandler(_ sender: Any) {

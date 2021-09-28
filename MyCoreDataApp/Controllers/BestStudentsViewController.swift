@@ -7,33 +7,51 @@
 
 import UIKit
 
-class StudentsScreenViewController: UIViewController {
+class BestStudentsViewController: UIViewController {
     
-    lazy var tableView: UITableView = {
-        let tableView = UITableView()
-        
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(StudentCell.nib(), forCellReuseIdentifier: StudentCell.reuseIdentifier)
-        
-        return tableView
-    }()
+    @IBOutlet weak var predicatePickerSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var sortType: SortType = .none
     
     var excellentStudents = [Student]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(tableView)
+        tableView.register(StudentCell.nib(), forCellReuseIdentifier: StudentCell.reuseIdentifier)
+        tableView.delegate = self
+        tableView.dataSource = self
         
-
+        predicatePickerSegmentedControl.addTarget(self, action: #selector(changeSortTypeHandler(_:)), for: .valueChanged)
+        
         setupNavigationBar()
+    }
+    
+    @objc private func changeSortTypeHandler(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            sortType = .none
+        case 1:
+            sortType = .identifier
+        case 2:
+            sortType = .name
+        case 3:
+            sortType = .date
+        default:
+            print("Out of index range")
+        }
+        updateUI()
+            
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        excellentStudents = DataManager.fetchExcellentStudents()
+        updateUI()
+    }
+    
+    private func updateUI() {
+        excellentStudents = DataManager.shared.fetchBestStudents(withSortType: sortType)
         tableView.reloadData()
     }
     
@@ -48,16 +66,11 @@ class StudentsScreenViewController: UIViewController {
         title = "Excellent students"
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        tableView.frame = view.bounds
-    }
-    
     
 
 }
 
-extension StudentsScreenViewController: UITableViewDelegate, UITableViewDataSource {
+extension BestStudentsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
@@ -74,6 +87,14 @@ extension StudentsScreenViewController: UITableViewDelegate, UITableViewDataSour
         cell.setup(withStudent: student)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let student = excellentStudents[indexPath.row]
+        student.isExcellentStudent = !student.isExcellentStudent
+        DataManager.shared.saveContext()
+        
+        tableView.reloadData()
     }
     
     

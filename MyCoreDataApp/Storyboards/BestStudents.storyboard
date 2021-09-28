@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fEE-Xa-pkK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Best Students View Controller-->
+        <scene sceneID="g7W-CH-pOZ">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="crO-IF-IfU" customClass="BestStudentsViewController" customModule="MyCoreDataApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jAN-x4-cSt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose the predicate to sort students" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5m-W4-X6A">
+                                <rect key="frame" x="20" y="98" width="374" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Mes-7K-9Kq">
+                                <rect key="frame" x="20" y="121" width="374" height="32"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <segments>
+                                    <segment title="None"/>
+                                    <segment title="Identifier"/>
+                                    <segment title="Name"/>
+                                    <segment title="Date"/>
+                                </segments>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HZ2-qf-pls">
+                                <rect key="frame" x="0.0" y="172" width="414" height="724"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zaG-mt-GlQ"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Mes-7K-9Kq" firstAttribute="top" secondItem="J5m-W4-X6A" secondAttribute="bottom" constant="5" id="7Jo-3T-bSo"/>
+                            <constraint firstItem="zaG-mt-GlQ" firstAttribute="trailing" secondItem="Mes-7K-9Kq" secondAttribute="trailing" constant="20" id="8XH-rY-hsp"/>
+                            <constraint firstItem="HZ2-qf-pls" firstAttribute="leading" secondItem="zaG-mt-GlQ" secondAttribute="leading" id="JXU-A7-mTv"/>
+                            <constraint firstItem="HZ2-qf-pls" firstAttribute="top" secondItem="Mes-7K-9Kq" secondAttribute="bottom" constant="20" id="LiD-Ii-1pt"/>
+                            <constraint firstItem="zaG-mt-GlQ" firstAttribute="trailing" secondItem="J5m-W4-X6A" secondAttribute="trailing" constant="20" id="Q78-L7-uC4"/>
+                            <constraint firstAttribute="bottom" secondItem="HZ2-qf-pls" secondAttribute="bottom" id="QWv-p1-oig"/>
+                            <constraint firstItem="J5m-W4-X6A" firstAttribute="top" secondItem="zaG-mt-GlQ" secondAttribute="top" constant="10" id="RO7-Ic-75j"/>
+                            <constraint firstItem="J5m-W4-X6A" firstAttribute="leading" secondItem="zaG-mt-GlQ" secondAttribute="leading" constant="20" id="S7e-Zl-rBz"/>
+                            <constraint firstItem="Mes-7K-9Kq" firstAttribute="leading" secondItem="zaG-mt-GlQ" secondAttribute="leading" constant="20" id="TZE-X8-Mbc"/>
+                            <constraint firstItem="zaG-mt-GlQ" firstAttribute="trailing" secondItem="HZ2-qf-pls" secondAttribute="trailing" id="g3P-mF-uof"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kT2-Zn-k4I"/>
+                    <connections>
+                        <outlet property="predicatePickerSegmentedControl" destination="Mes-7K-9Kq" id="byo-eg-Vbu"/>
+                        <outlet property="tableView" destination="HZ2-qf-pls" id="kEn-sK-rlO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T9R-Z3-QR6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="744.92753623188412" y="156.69642857142856"/>
+        </scene>
+        <!--Students-->
+        <scene sceneID="cCH-95-8n8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fEE-Xa-pkK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Students" image="person.3" catalog="system" id="bDo-T9-ST6"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LTW-CO-7E9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="crO-IF-IfU" kind="relationship" relationship="rootViewController" id="2XE-Z6-HT5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gfu-ve-wHZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-165.21739130434784" y="156.69642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.3" catalog="system" width="128" height="62"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

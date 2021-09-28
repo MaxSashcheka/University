@@ -65,12 +65,12 @@ class DataManager {
     
     
     //MARK: - Fetching data
-    static func fetchGroups() -> [Group] {
+    func fetchGroups() -> [Group] {
         let fetchRequest: NSFetchRequest<Group> = Group.fetchRequest()
         var groups = [Group]()
         
         do {
-            try groups = shared.persistentContainer.viewContext.fetch(fetchRequest)
+            try groups = persistentContainer.viewContext.fetch(fetchRequest)
         } catch let error {
             print("Error: \(error.localizedDescription)")
         }
@@ -78,14 +78,14 @@ class DataManager {
         return groups
     }
     
-    static func fetchStudents(forGroup group: Group) -> [Student] {
+    func fetchStudents(forGroup group: Group) -> [Student] {
         let fetchRequest: NSFetchRequest<Student> = Student.fetchRequest()
         var fetchingStudents = [Student]()
         
         fetchRequest.predicate = NSPredicate(format: "group == %@", group)
         
         do {
-            try fetchingStudents = shared.persistentContainer.viewContext.fetch(fetchRequest)
+            try fetchingStudents = persistentContainer.viewContext.fetch(fetchRequest)
         } catch let error {
             print("Error: \(error.localizedDescription)")
         }
@@ -93,14 +93,24 @@ class DataManager {
         return fetchingStudents
     }
     
-    static func fetchExcellentStudents() -> [Student] {
+    func fetchBestStudents(withSortType sortType: SortType) -> [Student] {
         let fetchRequest: NSFetchRequest<Student> = Student.fetchRequest()
         var fetchingStudents = [Student]()
         
         fetchRequest.predicate = NSPredicate(format: "isExcellentStudent == true")
+        switch sortType {
+        case .date:
+            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "enterDate", ascending: true)]
+        case .identifier:
+            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "identifier", ascending: true)]
+        case .name:
+            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        case .none:
+            print("no sorting")
+        }
         
         do {
-            try fetchingStudents = shared.persistentContainer.viewContext.fetch(fetchRequest)
+            try fetchingStudents = persistentContainer.viewContext.fetch(fetchRequest)
         } catch let error {
             print("Error: \(error.localizedDescription)")
         }
@@ -108,4 +118,11 @@ class DataManager {
         return fetchingStudents
     }
     
+}
+
+enum SortType {
+    case none
+    case identifier
+    case name
+    case date
 }

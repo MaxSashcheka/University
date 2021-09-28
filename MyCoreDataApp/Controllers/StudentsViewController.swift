@@ -22,17 +22,21 @@ class StudentsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let group = group {
-            groupNumberLabel.text = group.name!
-            students = DataManager.fetchStudents(forGroup: group)
-        }
-        
-
         title = "Students"
         
         studentsTableView.delegate = self
         studentsTableView.dataSource = self
         studentsTableView.register(StudentCell.nib(), forCellReuseIdentifier: StudentCell.reuseIdentifier)
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let group = group {
+            groupNumberLabel.text = group.name
+            students = DataManager.shared.fetchStudents(forGroup: group)
+        }
+        studentsTableView.reloadData()
     }
     
     
@@ -47,6 +51,8 @@ class StudentsViewController: UIViewController {
             print("studentIdentifierTextField error")
             return
         }
+        
+        if studentName.isEmpty || studentIdentifierText.isEmpty { return }
         
 
         studentNameTextField.resignFirstResponder()
@@ -100,8 +106,6 @@ extension StudentsViewController: UITableViewDelegate, UITableViewDataSource {
 
         tableView.reloadData()
     }
-    
-    
     
 }
 

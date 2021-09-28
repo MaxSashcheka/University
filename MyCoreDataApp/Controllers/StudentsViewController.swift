@@ -72,9 +72,6 @@ class StudentsViewController: UIViewController {
         
     }
     
-    
-
-
 }
 
 extension StudentsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -94,6 +91,12 @@ extension StudentsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.setup(withStudent: student)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let student = students[indexPath.row]
+        student.isExcellentStudent = !student.isExcellentStudent
+        tableView.reloadData()
     }
     
     

@@ -20,11 +20,7 @@ class StudentCell: UITableViewCell {
         super.awakeFromNib()
         studentImageView.layer.cornerRadius = studentImageView.frame.height / 2
         
-        let image = UIImage(systemName: "heart")
-        let imageView = UIImageView(image: image)
-        imageView.tintColor = .black
         
-        self.accessoryView = imageView
         
     }
     
@@ -32,15 +28,20 @@ class StudentCell: UITableViewCell {
         studentNameLabel.text = student.name
         studentIdentifierLabel.text = "Identifier: \(student.identifier)"
         studentEnterDateLabel.text = "temp"
-        
-        let randomIndex = Int.random(in: 0...26)
-        studentImageView.image = UIImage(named: "image\(randomIndex)")!
+
+        studentImageView.image = student.image
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM"
         studentEnterDateLabel.text = dateFormatter.string(from: student.enterDate!)
+        
+        let image = UIImage(systemName: student.isExcellentStudent ? "heart.fill" : "heart")
+        let imageView = UIImageView(image: image)
+        imageView.tintColor = .black
+        
+        self.accessoryView = imageView
     }
-
+    
     static func nib() -> UINib {
         return UINib(nibName: "StudentCell", bundle: nil)
     }

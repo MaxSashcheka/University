@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 class DataManager {
     
@@ -52,6 +53,11 @@ class DataManager {
         student.name = name
         student.identifier = Int16(identifier)
         student.enterDate = Date()
+        student.isExcellentStudent = false
+        
+        let randomImageIndex = Int.random(in: 0...26)
+        let randomImage = UIImage(named: "image\(randomImageIndex)")
+        student.image = randomImage
         
         group.addToStudents(student)
         

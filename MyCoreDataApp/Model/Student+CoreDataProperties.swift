@@ -2,13 +2,13 @@
 //  Student+CoreDataProperties.swift
 //  MyCoreDataApp
 //
-//  Created by Max Sashcheka on 9/27/21.
+//  Created by Max Sashcheka on 9/28/21.
 //
 //
 
 import Foundation
 import CoreData
-
+import UIKit
 
 extension Student {
 
@@ -16,9 +16,11 @@ extension Student {
         return NSFetchRequest<Student>(entityName: "Student")
     }
 
-    @NSManaged public var name: String?
-    @NSManaged public var identifier: Int16
     @NSManaged public var enterDate: Date?
+    @NSManaged public var identifier: Int16
+    @NSManaged public var name: String?
+    @NSManaged public var image: UIImage?
+    @NSManaged public var isExcellentStudent: Bool
     @NSManaged public var group: Group?
 
 }

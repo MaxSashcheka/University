@@ -14,6 +14,9 @@
 		DD44AB2B2701F34A001A28FE /* MyCoreDataApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD44AB292701F34A001A28FE /* MyCoreDataApp.xcdatamodeld */; };
 		DD44AB2D2701F34B001A28FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD44AB2C2701F34B001A28FE /* Assets.xcassets */; };
 		DD44AB302701F34B001A28FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD44AB2E2701F34B001A28FE /* LaunchScreen.storyboard */; };
+		DD70DC2D270300B40040E8EF /* DataBase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD70DC2C270300B40040E8EF /* DataBase.storyboard */; };
+		DD70DC30270300F30040E8EF /* Students.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD70DC2F270300F30040E8EF /* Students.storyboard */; };
+		DD70DC33270300FA0040E8EF /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD70DC32270300FA0040E8EF /* Settings.storyboard */; };
 		DD9BBDB12701F905002ECD57 /* Group+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9BBDAF2701F905002ECD57 /* Group+CoreDataClass.swift */; };
 		DD9BBDB22701F905002ECD57 /* Group+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9BBDB02701F905002ECD57 /* Group+CoreDataProperties.swift */; };
 		DD9BBDB52701F933002ECD57 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9BBDB42701F933002ECD57 /* DataManager.swift */; };
@@ -22,6 +25,8 @@
 		DD9BBDBF27020429002ECD57 /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9BBDBD27020429002ECD57 /* Student+CoreDataProperties.swift */; };
 		DD9BBDCA27021695002ECD57 /* StudentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9BBDC827021695002ECD57 /* StudentCell.swift */; };
 		DD9BBDCB27021695002ECD57 /* StudentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD9BBDC927021695002ECD57 /* StudentCell.xib */; };
+		DDFEE7892702811400CBE4F8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFEE7882702811400CBE4F8 /* SettingsViewController.swift */; };
+		DDFEE78C2702814300CBE4F8 /* StudentsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFEE78B2702814300CBE4F8 /* StudentsScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,9 @@
 		DD44AB2C2701F34B001A28FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD44AB2F2701F34B001A28FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD44AB312701F34B001A28FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD70DC2C270300B40040E8EF /* DataBase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DataBase.storyboard; sourceTree = "<group>"; };
+		DD70DC2F270300F30040E8EF /* Students.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Students.storyboard; sourceTree = "<group>"; };
+		DD70DC32270300FA0040E8EF /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		DD9BBDAF2701F905002ECD57 /* Group+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Group+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DD9BBDB02701F905002ECD57 /* Group+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Group+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DD9BBDB42701F933002ECD57 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -42,6 +50,8 @@
 		DD9BBDBD27020429002ECD57 /* Student+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DD9BBDC827021695002ECD57 /* StudentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCell.swift; sourceTree = "<group>"; };
 		DD9BBDC927021695002ECD57 /* StudentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudentCell.xib; sourceTree = "<group>"; };
+		DDFEE7882702811400CBE4F8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DDFEE78B2702814300CBE4F8 /* StudentsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +101,8 @@
 			children = (
 				DD44AB242701F34A001A28FE /* GroupsViewController.swift */,
 				DD9BBDB8270203F3002ECD57 /* StudentsViewController.swift */,
+				DDFEE7882702811400CBE4F8 /* SettingsViewController.swift */,
+				DDFEE78B2702814300CBE4F8 /* StudentsScreenViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -99,6 +111,9 @@
 			isa = PBXGroup;
 			children = (
 				DD44AB262701F34A001A28FE /* Main.storyboard */,
+				DD70DC2C270300B40040E8EF /* DataBase.storyboard */,
+				DD70DC2F270300F30040E8EF /* Students.storyboard */,
+				DD70DC32270300FA0040E8EF /* Settings.storyboard */,
 				DD44AB2E2701F34B001A28FE /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -192,9 +207,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD44AB302701F34B001A28FE /* LaunchScreen.storyboard in Resources */,
+				DD70DC2D270300B40040E8EF /* DataBase.storyboard in Resources */,
 				DD44AB2D2701F34B001A28FE /* Assets.xcassets in Resources */,
 				DD44AB282701F34A001A28FE /* Main.storyboard in Resources */,
+				DD70DC30270300F30040E8EF /* Students.storyboard in Resources */,
 				DD9BBDCB27021695002ECD57 /* StudentCell.xib in Resources */,
+				DD70DC33270300FA0040E8EF /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +234,8 @@
 				DD44AB212701F34A001A28FE /* AppDelegate.swift in Sources */,
 				DD9BBDBE27020429002ECD57 /* Student+CoreDataClass.swift in Sources */,
 				DD44AB232701F34A001A28FE /* SceneDelegate.swift in Sources */,
+				DDFEE78C2702814300CBE4F8 /* StudentsScreenViewController.swift in Sources */,
+				DDFEE7892702811400CBE4F8 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

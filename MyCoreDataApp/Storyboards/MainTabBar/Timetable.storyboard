@@ -5,13 +5,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Time Table View Controller-->
         <scene sceneID="eIs-5W-ujI">
             <objects>
-                <viewController id="ZFS-5W-N60" customClass="TimeTableViewController" customModule="MyCoreDataApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZFS-5W-N60" customClass="TimeTableViewController" customModule="University" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PWG-lR-tWw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,7 +73,7 @@
         <!--Time Table Detail View Controller-->
         <scene sceneID="vXH-n3-zG0">
             <objects>
-                <viewController storyboardIdentifier="TimeTableDetailViewController" id="Vzh-4y-sm7" customClass="TimeTableDetailViewController" customModule="MyCoreDataApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TimeTableDetailViewController" id="Vzh-4y-sm7" customClass="TimeTableDetailViewController" customModule="University" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5lc-JQ-4cW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,8 +115,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnF-So-F02" customClass="CustomButton" customModule="MyCoreDataApp" customModuleProvider="target">
-                                <rect key="frame" x="156.5" y="316" width="101" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnF-So-F02" customClass="CustomButton" customModule="University" customModuleProvider="target">
+                                <rect key="frame" x="156.5" y="807" width="101" height="35"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="101" id="6Ln-Xd-Z00"/>
@@ -128,20 +129,55 @@
                                     <action selector="saveLessonHandler:" destination="Vzh-4y-sm7" eventType="touchUpInside" id="3dl-Op-hE5"/>
                                 </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mSe-Ul-Yly">
+                                <rect key="frame" x="0.0" y="327" width="414" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Ec2-ll-IPM"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LZW-Re-8sc">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4Nq-ci-ugX">
+                                        <rect key="frame" x="0.0" y="11" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="63N-zH-1A2">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on group to select" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHS-GS-aJb">
+                                <rect key="frame" x="20" y="301" width="374" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" systemColor="systemGray2Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="f32-W1-34U"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="f32-W1-34U" firstAttribute="trailing" secondItem="mSe-Ul-Yly" secondAttribute="trailing" id="2qu-qD-lFr"/>
                             <constraint firstItem="f32-W1-34U" firstAttribute="trailing" secondItem="FPT-ee-w2I" secondAttribute="trailing" constant="20" id="3ZO-Ou-B2J"/>
                             <constraint firstItem="qrM-Gg-dPw" firstAttribute="top" secondItem="oYX-mL-gfF" secondAttribute="bottom" constant="10" id="831-X8-MV6"/>
+                            <constraint firstItem="f32-W1-34U" firstAttribute="bottom" secondItem="nnF-So-F02" secondAttribute="bottom" constant="20" id="9Ig-zg-21v"/>
+                            <constraint firstItem="f32-W1-34U" firstAttribute="trailing" secondItem="sHS-GS-aJb" secondAttribute="trailing" constant="20" id="C69-8h-l1A"/>
                             <constraint firstItem="f32-W1-34U" firstAttribute="trailing" secondItem="qrM-Gg-dPw" secondAttribute="trailing" constant="20" id="CeI-eK-FUE"/>
+                            <constraint firstItem="sHS-GS-aJb" firstAttribute="leading" secondItem="f32-W1-34U" secondAttribute="leading" constant="20" id="DSQ-Fo-pE4"/>
                             <constraint firstItem="GRg-hf-6H2" firstAttribute="top" secondItem="fUI-EY-vMs" secondAttribute="bottom" constant="5" id="DvO-FU-OvQ"/>
                             <constraint firstItem="fUI-EY-vMs" firstAttribute="top" secondItem="uMO-B1-A34" secondAttribute="bottom" constant="20" id="FA3-Mm-KRs"/>
-                            <constraint firstItem="nnF-So-F02" firstAttribute="top" secondItem="qrM-Gg-dPw" secondAttribute="bottom" constant="30" id="J71-Hp-FZI"/>
                             <constraint firstItem="FPT-ee-w2I" firstAttribute="leading" secondItem="f32-W1-34U" secondAttribute="leading" constant="20" id="Kvn-sz-M7s"/>
                             <constraint firstItem="fUI-EY-vMs" firstAttribute="leading" secondItem="f32-W1-34U" secondAttribute="leading" constant="20" id="KwY-yo-QC9"/>
                             <constraint firstItem="f32-W1-34U" firstAttribute="trailing" secondItem="GRg-hf-6H2" secondAttribute="trailing" constant="20" id="Ljy-cn-CgB"/>
+                            <constraint firstItem="mSe-Ul-Yly" firstAttribute="leading" secondItem="f32-W1-34U" secondAttribute="leading" id="Rj7-Of-GNf"/>
                             <constraint firstItem="f32-W1-34U" firstAttribute="trailing" secondItem="uMO-B1-A34" secondAttribute="trailing" constant="20" id="Tu6-fB-oAC"/>
+                            <constraint firstItem="mSe-Ul-Yly" firstAttribute="top" secondItem="sHS-GS-aJb" secondAttribute="bottom" constant="8" symbolic="YES" id="VrY-12-p2V"/>
+                            <constraint firstItem="sHS-GS-aJb" firstAttribute="top" secondItem="qrM-Gg-dPw" secondAttribute="bottom" constant="15" id="can-a6-6Ea"/>
                             <constraint firstItem="f32-W1-34U" firstAttribute="trailing" secondItem="oYX-mL-gfF" secondAttribute="trailing" constant="20" id="dSB-c4-V3K"/>
                             <constraint firstItem="uMO-B1-A34" firstAttribute="top" secondItem="FPT-ee-w2I" secondAttribute="bottom" constant="5" id="dqC-A1-OBJ"/>
                             <constraint firstItem="FPT-ee-w2I" firstAttribute="top" secondItem="f32-W1-34U" secondAttribute="top" constant="20" id="htk-Jj-Ait"/>
@@ -158,6 +194,7 @@
                         <outlet property="lessonLocationTextFIeld" destination="GRg-hf-6H2" id="zUu-sP-rMv"/>
                         <outlet property="lessonNameTextField" destination="uMO-B1-A34" id="5lA-vn-D04"/>
                         <outlet property="lessonTypeSegmentedControl" destination="qrM-Gg-dPw" id="pXU-nZ-r8P"/>
+                        <outlet property="studentGroupCollectionView" destination="mSe-Ul-Yly" id="BQJ-a1-MKh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Py-KB-LfP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -192,6 +229,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

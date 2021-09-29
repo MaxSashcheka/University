@@ -15,6 +15,8 @@
 		DD44AB2B2701F34A001A28FE /* MyCoreDataApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD44AB292701F34A001A28FE /* MyCoreDataApp.xcdatamodeld */; };
 		DD44AB2D2701F34B001A28FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD44AB2C2701F34B001A28FE /* Assets.xcassets */; };
 		DD44AB302701F34B001A28FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD44AB2E2701F34B001A28FE /* LaunchScreen.storyboard */; };
+		DD5A9CDA270488E70048903D /* GroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5A9CD8270488E70048903D /* GroupCollectionViewCell.swift */; };
+		DD5A9CDB270488E70048903D /* GroupCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD5A9CD9270488E70048903D /* GroupCollectionViewCell.xib */; };
 		DD70DC2D270300B40040E8EF /* DataBase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD70DC2C270300B40040E8EF /* DataBase.storyboard */; };
 		DD70DC30270300F30040E8EF /* BestStudents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD70DC2F270300F30040E8EF /* BestStudents.storyboard */; };
 		DD70DC33270300FA0040E8EF /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD70DC32270300FA0040E8EF /* Settings.storyboard */; };
@@ -48,6 +50,8 @@
 		DD44AB2C2701F34B001A28FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD44AB2F2701F34B001A28FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD44AB312701F34B001A28FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD5A9CD8270488E70048903D /* GroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCollectionViewCell.swift; sourceTree = "<group>"; };
+		DD5A9CD9270488E70048903D /* GroupCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupCollectionViewCell.xib; sourceTree = "<group>"; };
 		DD70DC2C270300B40040E8EF /* DataBase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DataBase.storyboard; sourceTree = "<group>"; };
 		DD70DC2F270300F30040E8EF /* BestStudents.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BestStudents.storyboard; sourceTree = "<group>"; };
 		DD70DC32270300FA0040E8EF /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -225,6 +229,8 @@
 			children = (
 				DDD412DD2703972200730885 /* LessonCell.swift */,
 				DDD412DE2703972200730885 /* LessonCell.xib */,
+				DD5A9CD8270488E70048903D /* GroupCollectionViewCell.swift */,
+				DD5A9CD9270488E70048903D /* GroupCollectionViewCell.xib */,
 			);
 			path = "Custom CollectionView Cells";
 			sourceTree = "<group>";
@@ -292,6 +298,7 @@
 				DD44AB2D2701F34B001A28FE /* Assets.xcassets in Resources */,
 				DD44AB282701F34A001A28FE /* Main.storyboard in Resources */,
 				DD70DC30270300F30040E8EF /* BestStudents.storyboard in Resources */,
+				DD5A9CDB270488E70048903D /* GroupCollectionViewCell.xib in Resources */,
 				DD9BBDCB27021695002ECD57 /* StudentCell.xib in Resources */,
 				DD70DC33270300FA0040E8EF /* Settings.storyboard in Resources */,
 				DDD412E02703972200730885 /* LessonCell.xib in Resources */,
@@ -313,6 +320,7 @@
 				DDD412D82703934500730885 /* Group+CoreDataClass.swift in Sources */,
 				DD9BBDB52701F933002ECD57 /* DataManager.swift in Sources */,
 				DDD412B62703815200730885 /* TimeTableViewController.swift in Sources */,
+				DD5A9CDA270488E70048903D /* GroupCollectionViewCell.swift in Sources */,
 				DD9BBDCA27021695002ECD57 /* StudentCell.swift in Sources */,
 				DDD412D92703934500730885 /* Group+CoreDataProperties.swift in Sources */,
 				DD0AA2372703C61B0068168D /* TimeTableDetailViewController.swift in Sources */,

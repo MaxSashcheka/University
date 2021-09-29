@@ -71,14 +71,6 @@ class GroupsViewController: UIViewController {
 
 extension GroupsViewController: UITableViewDelegate, UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if groups.count != 0 {
-            return "Click on cell to open students screen"
-        } else {
-            return ""
-        }
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let studentsViewController = UIStoryboard(name: "DataBase", bundle: nil).instantiateViewController(identifier: "StudentsViewController") as! StudentsViewController
         
@@ -99,6 +91,7 @@ extension GroupsViewController: UITableViewDelegate, UITableViewDataSource {
         let group = groups[indexPath.row]
         cell.textLabel?.text = group.name
         cell.detailTextLabel?.text = "Grade: \(group.grade + 1)"
+        cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
         
         return cell
     }

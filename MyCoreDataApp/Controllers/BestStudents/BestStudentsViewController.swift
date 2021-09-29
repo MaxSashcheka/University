@@ -52,7 +52,12 @@ class BestStudentsViewController: UIViewController {
     
     private func updateUI() {
         excellentStudents = DataManager.shared.fetchBestStudents(withSortType: sortType)
-        tableView.reloadData()
+        var indexPathArray = [IndexPath]()
+        for i in 0..<excellentStudents.count {
+            indexPathArray.append(IndexPath(row: i, section: 0))
+        }
+        tableView.reloadRows(at: indexPathArray, with: .fade)
+        
     }
     
     private func setupNavigationBar() {

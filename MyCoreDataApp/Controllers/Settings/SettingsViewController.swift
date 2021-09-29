@@ -32,14 +32,20 @@ class SettingsViewController: UIViewController {
         for group in groups {
             DataManager.shared.persistentContainer.viewContext.delete(group)
         }
-        DataManager.shared.saveContext()
         
+        let lessons = DataManager.shared.fetchLessons(withLessonType: LessonType.all)
+        for lesson in lessons {
+            DataManager.shared.persistentContainer.viewContext.delete(lesson)
+        }
+        
+        DataManager.shared.saveContext()
+
     }
     
     @IBAction func fillRandomData(_ sender: Any) {
         var model = RandomStudentsModel()
         
-        for _ in 0..<Int.random(in: 0..<model.groupsNames.count) {
+        for _ in 0..<Int.random(in: 3..<model.groupsNames.count) {
             let groupName = model.groupsNames.removeFirst()
             var group = DataManager.shared.createGroup(name: groupName, grade: Int.random(in: 1...4))
             

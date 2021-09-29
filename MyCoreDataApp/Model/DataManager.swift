@@ -75,8 +75,22 @@ class DataManager {
     
     //MARK: - Fetching data
     
-    func fetchLessons() -> [Lesson] {
+    func fetchLessons(withLessonType lessonType: LessonType) -> [Lesson] {
         let fetchRequest: NSFetchRequest<Lesson> = Lesson.fetchRequest()
+        
+        switch lessonType {
+        case .lab:
+            fetchRequest.predicate = NSPredicate(format: "lessonType == %@", "lab")
+
+        case .practice:
+            fetchRequest.predicate = NSPredicate(format: "lessonType == %@", "practice")
+            
+        case .lecture:
+            fetchRequest.predicate = NSPredicate(format: "lessonType == %@", "lecture")
+        default:
+            print("Last case is all, but it should not be handled")
+        }
+        
         var lessons = [Lesson]()
         
         do {

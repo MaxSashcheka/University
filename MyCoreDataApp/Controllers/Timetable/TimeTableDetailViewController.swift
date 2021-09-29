@@ -33,6 +33,10 @@ class TimeTableDetailViewController: UIViewController {
             return
         }
         
+        if lessonName.isEmpty || lessonLocation.isEmpty {
+            return
+        }
+        
         var lessonType = LessonType.lecture
         switch lessonTypeSegmentedControl.selectedSegmentIndex {
         case 0:

@@ -42,14 +42,33 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.3.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GBB-xw-LLg">
+                        <rect key="frame" x="41" y="86.5" width="30" height="27"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="kzj-mU-HnT"/>
+                            <constraint firstAttribute="height" constant="30" id="wwY-rz-t6b"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="913802, 913801, 910201, 914802" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTW-H5-GYx">
+                        <rect key="frame" x="83" y="89.5" width="272" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
+                <constraint firstItem="mTW-H5-GYx" firstAttribute="leading" secondItem="GBB-xw-LLg" secondAttribute="trailing" constant="12" id="01p-gk-lcR"/>
                 <constraint firstItem="eg9-EP-Soe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="14L-j2-sEL"/>
                 <constraint firstAttribute="trailing" secondItem="eg9-EP-Soe" secondAttribute="trailing" constant="20" id="1BU-NI-hdx"/>
                 <constraint firstItem="jIX-Gw-eqU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="2Id-aM-r6f"/>
                 <constraint firstItem="Qyz-Jn-mcM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="3G7-lo-WTR"/>
+                <constraint firstAttribute="bottom" secondItem="GBB-xw-LLg" secondAttribute="bottom" constant="25" id="7DM-F2-KX9"/>
+                <constraint firstItem="GBB-xw-LLg" firstAttribute="leading" secondItem="jIX-Gw-eqU" secondAttribute="trailing" constant="20" id="A00-6g-xMb"/>
+                <constraint firstItem="mTW-H5-GYx" firstAttribute="centerY" secondItem="GBB-xw-LLg" secondAttribute="centerY" id="H81-CY-YhZ"/>
+                <constraint firstAttribute="trailing" secondItem="mTW-H5-GYx" secondAttribute="trailing" constant="10" id="Pa0-vo-I1Q"/>
                 <constraint firstItem="bUi-wD-jN8" firstAttribute="leading" secondItem="jIX-Gw-eqU" secondAttribute="trailing" constant="20" id="Wu2-LJ-Ntj"/>
                 <constraint firstItem="bUi-wD-jN8" firstAttribute="top" secondItem="Qyz-Jn-mcM" secondAttribute="bottom" constant="3" id="qCp-Ke-QdS"/>
                 <constraint firstAttribute="bottom" secondItem="jIX-Gw-eqU" secondAttribute="bottom" constant="10" id="rkI-HQ-wt3"/>
@@ -58,15 +77,17 @@
             </constraints>
             <size key="customSize" width="365" height="139"/>
             <connections>
+                <outlet property="groupsNamesLabel" destination="mTW-H5-GYx" id="2gS-cx-bDN"/>
                 <outlet property="leftSideIndicatorView" destination="jIX-Gw-eqU" id="sbb-bo-2jf"/>
                 <outlet property="lessonTypeNameLabel" destination="eg9-EP-Soe" id="wlR-RD-dYd"/>
                 <outlet property="locationLabel" destination="bUi-wD-jN8" id="dZe-6W-lLf"/>
                 <outlet property="titleLabel" destination="Qyz-Jn-mcM" id="s7O-7G-1ck"/>
             </connections>
-            <point key="canvasLocation" x="57.24637681159421" y="137.27678571428569"/>
+            <point key="canvasLocation" x="57.24637681159421" y="136.60714285714286"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

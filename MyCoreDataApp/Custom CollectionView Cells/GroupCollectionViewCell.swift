@@ -12,7 +12,6 @@ class GroupCollectionViewCell: UICollectionViewCell {
     static let reuseIdentifier = "GroupCollectionViewCell"
 
     @IBOutlet weak var groupNameLabel: UILabel!
-    var isChoosed = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,20 +19,23 @@ class GroupCollectionViewCell: UICollectionViewCell {
         backgroundColor = .white
         layer.borderWidth = 2
         layer.borderColor = UIColor.darkGray.cgColor
-        layer.cornerRadius = frame.height / 9
+        layer.cornerRadius = 12
+        
+        groupNameLabel.font = UIFont.systemFont(ofSize: 20, weight: .medium)
     }
     
-    func setup(withGroup group: Group) {
+    func setup(withGroup group: Group, isSelected: Bool) {
         groupNameLabel.text = group.name
-    }
-    
-    func cellDidTapped() {
-        isChoosed = !isChoosed
-        if isChoosed {
-            
+        
+        if isSelected {
+            layer.borderWidth = 3.6
+            layer.borderColor = UIColor.red.cgColor
+        } else {
+            layer.borderWidth = 2
+            layer.borderColor = UIColor.darkGray.cgColor
         }
     }
-    
+
 
     static func nib() -> UINib {
         return UINib(nibName: "GroupCollectionViewCell", bundle: nil)

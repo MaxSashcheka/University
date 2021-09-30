@@ -102,6 +102,22 @@ class DataManager {
         return lessons
     }
     
+    func fetchGroups(forLesson lesson: Lesson) -> [Group] {
+
+        let fetchRequest: NSFetchRequest<Group> = Group.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "(ANY lessons == %@)", lesson)
+        var groups = [Group]()
+        
+        do {
+            try groups = persistentContainer.viewContext.fetch(fetchRequest)
+        } catch let error {
+            print("Error: \(error.localizedDescription)")
+        }
+        
+        return groups
+        
+    }
+    
     func fetchGroups() -> [Group] {
         let fetchRequest: NSFetchRequest<Group> = Group.fetchRequest()
         var groups = [Group]()

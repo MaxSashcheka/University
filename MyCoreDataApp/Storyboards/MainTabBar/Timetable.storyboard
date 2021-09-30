@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -130,10 +129,10 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mSe-Ul-Yly">
-                                <rect key="frame" x="0.0" y="327" width="414" height="150"/>
+                                <rect key="frame" x="0.0" y="327" width="414" height="110"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="Ec2-ll-IPM"/>
+                                    <constraint firstAttribute="height" constant="110" id="Ec2-ll-IPM"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LZW-Re-8sc">
                                     <size key="itemSize" width="128" height="128"/>
@@ -141,21 +140,18 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4Nq-ci-ugX">
-                                        <rect key="frame" x="0.0" y="11" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="63N-zH-1A2">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on group to select" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHS-GS-aJb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on group to select (multiple selection allowed)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHS-GS-aJb">
                                 <rect key="frame" x="20" y="301" width="374" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" systemColor="systemGray2Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You cant choose more than 4  groups per lesson" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jQm-dE-C3A">
+                                <rect key="frame" x="0.0" y="437" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -171,12 +167,15 @@
                             <constraint firstItem="sHS-GS-aJb" firstAttribute="leading" secondItem="f32-W1-34U" secondAttribute="leading" constant="20" id="DSQ-Fo-pE4"/>
                             <constraint firstItem="GRg-hf-6H2" firstAttribute="top" secondItem="fUI-EY-vMs" secondAttribute="bottom" constant="5" id="DvO-FU-OvQ"/>
                             <constraint firstItem="fUI-EY-vMs" firstAttribute="top" secondItem="uMO-B1-A34" secondAttribute="bottom" constant="20" id="FA3-Mm-KRs"/>
+                            <constraint firstItem="jQm-dE-C3A" firstAttribute="leading" secondItem="f32-W1-34U" secondAttribute="leading" id="H82-e3-msr"/>
+                            <constraint firstItem="jQm-dE-C3A" firstAttribute="top" secondItem="mSe-Ul-Yly" secondAttribute="bottom" id="IQu-qd-yUV"/>
                             <constraint firstItem="FPT-ee-w2I" firstAttribute="leading" secondItem="f32-W1-34U" secondAttribute="leading" constant="20" id="Kvn-sz-M7s"/>
                             <constraint firstItem="fUI-EY-vMs" firstAttribute="leading" secondItem="f32-W1-34U" secondAttribute="leading" constant="20" id="KwY-yo-QC9"/>
                             <constraint firstItem="f32-W1-34U" firstAttribute="trailing" secondItem="GRg-hf-6H2" secondAttribute="trailing" constant="20" id="Ljy-cn-CgB"/>
                             <constraint firstItem="mSe-Ul-Yly" firstAttribute="leading" secondItem="f32-W1-34U" secondAttribute="leading" id="Rj7-Of-GNf"/>
                             <constraint firstItem="f32-W1-34U" firstAttribute="trailing" secondItem="uMO-B1-A34" secondAttribute="trailing" constant="20" id="Tu6-fB-oAC"/>
                             <constraint firstItem="mSe-Ul-Yly" firstAttribute="top" secondItem="sHS-GS-aJb" secondAttribute="bottom" constant="8" symbolic="YES" id="VrY-12-p2V"/>
+                            <constraint firstItem="f32-W1-34U" firstAttribute="trailing" secondItem="jQm-dE-C3A" secondAttribute="trailing" id="WG5-6T-kwi"/>
                             <constraint firstItem="sHS-GS-aJb" firstAttribute="top" secondItem="qrM-Gg-dPw" secondAttribute="bottom" constant="15" id="can-a6-6Ea"/>
                             <constraint firstItem="f32-W1-34U" firstAttribute="trailing" secondItem="oYX-mL-gfF" secondAttribute="trailing" constant="20" id="dSB-c4-V3K"/>
                             <constraint firstItem="uMO-B1-A34" firstAttribute="top" secondItem="FPT-ee-w2I" secondAttribute="bottom" constant="5" id="dqC-A1-OBJ"/>
@@ -191,6 +190,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="errorLabel" destination="jQm-dE-C3A" id="EQP-bD-SU1"/>
                         <outlet property="lessonLocationTextFIeld" destination="GRg-hf-6H2" id="zUu-sP-rMv"/>
                         <outlet property="lessonNameTextField" destination="uMO-B1-A34" id="5lA-vn-D04"/>
                         <outlet property="lessonTypeSegmentedControl" destination="qrM-Gg-dPw" id="pXU-nZ-r8P"/>
@@ -238,6 +238,9 @@
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

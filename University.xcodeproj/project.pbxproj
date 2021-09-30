@@ -17,6 +17,7 @@
 		DD44AB302701F34B001A28FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD44AB2E2701F34B001A28FE /* LaunchScreen.storyboard */; };
 		DD5A9CDA270488E70048903D /* GroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5A9CD8270488E70048903D /* GroupCollectionViewCell.swift */; };
 		DD5A9CDB270488E70048903D /* GroupCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD5A9CD9270488E70048903D /* GroupCollectionViewCell.xib */; };
+		DD63027427062C7100E6EA8E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD63027327062C7100E6EA8E /* Extensions.swift */; };
 		DD70DC2D270300B40040E8EF /* DataBase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD70DC2C270300B40040E8EF /* DataBase.storyboard */; };
 		DD70DC30270300F30040E8EF /* BestStudents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD70DC2F270300F30040E8EF /* BestStudents.storyboard */; };
 		DD70DC33270300FA0040E8EF /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD70DC32270300FA0040E8EF /* Settings.storyboard */; };
@@ -52,6 +53,7 @@
 		DD44AB312701F34B001A28FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD5A9CD8270488E70048903D /* GroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCollectionViewCell.swift; sourceTree = "<group>"; };
 		DD5A9CD9270488E70048903D /* GroupCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupCollectionViewCell.xib; sourceTree = "<group>"; };
+		DD63027327062C7100E6EA8E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		DD70DC2C270300B40040E8EF /* DataBase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DataBase.storyboard; sourceTree = "<group>"; };
 		DD70DC2F270300F30040E8EF /* BestStudents.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BestStudents.storyboard; sourceTree = "<group>"; };
 		DD70DC32270300FA0040E8EF /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		DD44AB1F2701F34A001A28FE /* MyCoreDataApp */ = {
 			isa = PBXGroup;
 			children = (
+				DD63027227062C6200E6EA8E /* Utils */,
 				DD9BBDC22702166E002ECD57 /* Custom TableView Cells */,
 				DDD412BB2703852D00730885 /* Custom CollectionView Cells */,
 				DDABE2912703108400650E22 /* CustomViews */,
@@ -196,6 +199,15 @@
 			path = AppFiles;
 			sourceTree = "<group>";
 		};
+		DD63027227062C6200E6EA8E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DDABE2922703109C00650E22 /* CustomButton.swift */,
+				DD63027327062C7100E6EA8E /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		DD9BBDC22702166E002ECD57 /* Custom TableView Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,7 +220,6 @@
 		DDABE2912703108400650E22 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				DDABE2922703109C00650E22 /* CustomButton.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -325,6 +336,7 @@
 				DDD412D92703934500730885 /* Group+CoreDataProperties.swift in Sources */,
 				DD0AA2372703C61B0068168D /* TimeTableDetailViewController.swift in Sources */,
 				DD44AB252701F34A001A28FE /* GroupsViewController.swift in Sources */,
+				DD63027427062C7100E6EA8E /* Extensions.swift in Sources */,
 				DD44AB212701F34A001A28FE /* AppDelegate.swift in Sources */,
 				DDABE2932703109C00650E22 /* CustomButton.swift in Sources */,
 				DD44AB232701F34A001A28FE /* SceneDelegate.swift in Sources */,

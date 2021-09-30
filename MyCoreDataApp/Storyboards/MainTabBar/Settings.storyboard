@@ -11,7 +11,7 @@
         <!--Settings View Controller-->
         <scene sceneID="iZ7-vt-7pS">
             <objects>
-                <viewController id="kSv-xe-7vA" customClass="SettingsViewController" customModule="MyCoreDataApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kSv-xe-7vA" customClass="SettingsViewController" customModule="University" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DDb-vi-HcY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,7 +19,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="YFd-Sz-awZ">
                                 <rect key="frame" x="62" y="399.5" width="290" height="97"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7e3-jY-nvO" customClass="CustomButton" customModule="MyCoreDataApp" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7e3-jY-nvO" customClass="CustomButton" customModule="University" customModuleProvider="target">
                                         <rect key="frame" x="55" y="0.0" width="180" height="36"/>
                                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                                         <constraints>
@@ -31,7 +31,7 @@
                                             <action selector="removeAllRecordsHandler:" destination="kSv-xe-7vA" eventType="touchUpInside" id="OA7-Gy-J6c"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1o-Pm-izw" customClass="CustomButton" customModule="MyCoreDataApp" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1o-Pm-izw" customClass="CustomButton" customModule="University" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="61" width="290" height="36"/>
                                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                                         <constraints>

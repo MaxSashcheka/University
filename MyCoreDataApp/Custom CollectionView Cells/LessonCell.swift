@@ -15,7 +15,9 @@ class LessonCell: UICollectionViewCell {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var lessonTypeNameLabel: UILabel!
     
-    static let reuseIdentifier = "S"
+    @IBOutlet weak var groupsNamesLabel: UILabel!
+    
+    static let reuseIdentifier = "LessonCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -56,6 +58,16 @@ class LessonCell: UICollectionViewCell {
         
         titleLabel.text = lesson.title
         locationLabel.text = lesson.location
+        
+        let displayingGroups = DataManager.shared.fetchGroups(forLesson: lesson)
+        var groupsNamesText = ""
+        for index in displayingGroups.indices {
+            groupsNamesText += "\(displayingGroups[index].name!)"
+            if index != (displayingGroups.count - 1) {
+                groupsNamesText += ", "
+            }
+        }
+        groupsNamesLabel.text = groupsNamesText
 
     }
     
